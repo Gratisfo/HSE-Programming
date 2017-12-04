@@ -1,5 +1,6 @@
+y = input('Введите название файла:' )
 j = 0
-with open('text.txt', encoding="utf-8") as f:
+with open(y, encoding="utf-8") as f:
     text = f.read()
 print(text)
 splited_text = text.split()
