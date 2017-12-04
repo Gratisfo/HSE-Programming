@@ -1,8 +1,6 @@
-y = input()
 j = 0
-with open(y, encoding="utf-8") as f:
-text = f.read()
-f.close()
+with open('text.txt', encoding="utf-8") as f:
+    text = f.read()
 print(text)
 splited_text = text.split()
 print('Всего слов:', len(splited_text))
@@ -11,7 +9,7 @@ for w in splited_text:
         j = j +1
 print('Слов, длинее 10-ти букв: ', j)
 p = (j/len(splited_text))*100
-print(p,"%")
+print(round(p),'%')
         
 #Запятая, стоящая рядом со словом, будет засчитываться в его длину.
 #Одиночные символы будут считаться, как отдельные слова
