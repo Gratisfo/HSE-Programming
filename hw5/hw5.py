@@ -1,8 +1,10 @@
 inp = []
 while True:
     x = input('Введите латинское слово: ')
-    if x == '': break
-    else: inp.append(x)
+    if x == '': 
+        break
+    else: 
+        inp.append(x)
 out = []
 for i in inp:
   if i[-3:] == "tur" or i[-3:] == "ntur":
