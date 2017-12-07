@@ -15,10 +15,9 @@ while True:
         words.append(word)
 for w in words:
     if w in voc:
-        print('Есть такое слова')
         for b in bigvoc:
             if b[0] == w:
-                print("Морф.призн: ", ', '.join(b[2:-2]),'; ' 'ipm:', ' '.join(b[-1:]))
+                print("Морф.призн слова", '"', w, '":', ', '.join(b[2:-2]),'; ' 'ipm:', ' '.join(b[-1:]))
     else:
-        print('Такого слова нет')
-            
+        print('В словаре нет слова:', w)
+
