@@ -57,7 +57,7 @@ def main():
     num_of_sents = random.randint(1, 15) 
     for i in range(num_of_sents):  
         sentence = random_sentence() 
-        sentence = sentence.capitalize() вной
+        sentence = sentence.capitalize() 
         print(sentence, end=' ') 
 
 main()
