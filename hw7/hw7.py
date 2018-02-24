@@ -1,3 +1,9 @@
+def take_filename():
+    '''Просит у пользователя ввести название файла с текстом'''
+    filename = input('Введите название файла: ')
+    print(filename)
+    return filename
+
 def words_from_file(filename):
     ''' Читает текст и разделяет его на слова'''
     with open (filename, encoding = 'utf-8') as f:
@@ -22,9 +28,8 @@ def len_counter(adj):
     return average
        
 
-
 def main():
-    words = words_from_file('text.txt')
+    words = words_from_file(take_filename())
     adjectives = adj_counter(words)
     print('Колличество прилагательных на ous:',len(adjectives))
     length = len_counter(adj_counter(words))
