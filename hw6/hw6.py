@@ -52,12 +52,11 @@ def random_sentence():
     return sentence
 
 def main():
-    print(random_sentence())
-    print()
-    num_of_sents = random.randint(1, 15) 
-    for i in range(num_of_sents):  
+      num_of_sents = random.randint(5, 15) 
+      for i in range(num_of_sents):  
         sentence = random_sentence() 
-        sentence = sentence.capitalize() 
-        print(sentence, end=' ') 
+        sentence = sentence.capitalize()
+        print(sentence) 
 
-main()
+if __name__ == '__main__':
+    main()
