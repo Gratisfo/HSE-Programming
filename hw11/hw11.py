@@ -8,9 +8,10 @@ def open_file(fname):
 
 def replace_word(text):
     new_text_1 = re.sub('динозавр', 'кот', text)
-    new_text_2 = re.sub('Динозавр','Кот', new_text_1)    
+    new_text_2 = re.sub('Динозавр','Кот', new_text_1)
+    new_text_3 = re.sub('Диноза́вр','Кот', new_text_2)
 
-    return new_text_2
+    return new_text_3
 
 def create_newfile(page):
     with open ('Коты.html', 'w', encoding = 'utf-8') as f:
