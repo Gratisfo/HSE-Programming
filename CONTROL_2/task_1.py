@@ -11,7 +11,7 @@ def count_stripes(text):
   print(num_str)
   num_str = len(re.findall(r".*\n",text))
   
-  with open ('amount.txt', 'w', encoding = 'utf-8') as f:
+  with open ('result_1.txt', 'w', encoding = 'utf-8') as f:
     f.write(str(num_str))
     
 def main():
