@@ -1,19 +1,18 @@
 import os
 
 file_list = os.listdir()
-print(file_list) #Список содержимого в папке
 
 def short_name(flist):
-    dirs = 0 #папки
-    one_word = 0 #папки с одним словом в названии
+    dirs = [] #папки
+    one_word = [] #папки с одним словом в названии
     for file in flist:
         if '.' not in file: #Нет расширения => папка
-            dirs += 1
+            dirs.append(file)
             if ' ' in file.lower(): #Есть пробелы в названии => больше одного слова
-                one_word += 1
-    if dirs > 0:
-        if one_word > 0:
-            print("Количество папок, в названии которых больше одного слова:", one_word)
+                one_word.append(file)
+    if len(dirs) > 0:
+        if len(one_word) > 0:
+            print("Количество папок, в названии которых больше одного слова:", len(one_word), '\n', ', '.join(one_word))
         else:
             print('Названия всех папок состоят из одного слова')
     else:
