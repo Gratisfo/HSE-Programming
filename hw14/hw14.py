@@ -15,7 +15,7 @@ def clean_text(text):
 
 def reduplication(sentences):
    
-    for sent in sentences[:10]: #Делит предложениe на слова, переводит в нижний регистр
+    for sent in sentences[:500]: #Делит предложениe на слова, переводит в нижний регистр
         if sent:            
            words = sent.lower().split()
            new_sent = []
