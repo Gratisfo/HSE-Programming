@@ -37,7 +37,8 @@ def task_2(path):
                 for a in f_r:
                     if re.search(r'lex="(.*?)"', a):
                         if re.search(r'lex="(.*?)"', a).groups()[0].isupper():
-                            abbrev.append(re.search(r'lex="(.*?)"', a).groups()[0])
+                            if 'XX' not in (re.search(r'lex="(.*?)"', a).groups()[0]):
+                                abbrev.append(re.search(r'lex="(.*?)"', a).groups()[0])
         freq = collections.Counter(abbrev)
         for abb in freq:
             a = abb + '\t'+ str(freq[abb]) + '\n'
